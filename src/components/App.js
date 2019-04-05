@@ -47,15 +47,13 @@ class App extends React.Component {
     }
 }
 
-function mapStateToProps(state){
-    return {
-        orders: state.orders,
-        showOldOrders: state.showOldOrders,
-        sortBy: state.orderBy,
-        address: state.address,
-        search: state.search
-    }
-}
+const mapStateToProps = state => ({
+  orders: state.orders,
+  showOldOrders: state.showOldOrders,
+  sortBy: state.orderBy,
+  address: state.address,
+  search: state.search
+})
 
 const matchDispatchToProps = (dispatch) => bindActionCreators({handleCheckboxChange: showOlderOrders}, dispatch);
 
