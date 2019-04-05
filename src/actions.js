@@ -19,12 +19,10 @@
  * action creators
  */
 
- export function showOlderOrders(filter) {
-    return {
-      type: SWITCH_CHECKBOX,
-      filter
-    }
- }
+export const showOlderOrders = filter => ({
+  type: SWITCH_CHECKBOX,
+  filter
+})
 
  export const sortOrders = (sort) => ({type: SORT_BY, sort})
 
